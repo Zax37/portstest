@@ -15,7 +15,8 @@ app.get('/', function(req, res) {
 })
 
 app.post('/', function(req, res) {
-    calls.push(req);
+    console.log(req);
+    // calls.push(req);
     res.text('ok');
 });
 
