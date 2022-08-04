@@ -15,9 +15,8 @@ app.get('/', function(req, res) {
 })
 
 app.post('/', function(req, res) {
-    console.log(req);
-    // calls.push(req);
-    res.text('ok');
+    calls.push(req.headers['x-forwarded-for']);
+    res.json({});
 });
 
 module.exports = app;
